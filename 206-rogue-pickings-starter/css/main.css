@@ -1,10 +1,24 @@
+html {
+	font-size: 16px;
+}
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	font-size: 1rem;
 }
 
 .container{
 	max-width: 1200px;
+	width: 90%;
 	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	
 }
 
 h1,
@@ -15,40 +29,47 @@ h3 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.875rem;
+	border-bottom: 3px solid #77a466;
+	width: 100%;
 }
 h2 {
-	font-size: 18px;
+	font-size: 1.125rem;
 }
 h3 {
-	font-size: 12px;
+	font-size: 0.75rem;
 }
 
 p {
-	font-size: 14px;
+	font-size: 0.875rem;
 	line-height: 21px;
     padding: 0 30px;
 }
 
 /*The widths are in a percentage!*/
 header {
-	height: 110px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 	border-bottom: 3px solid #77a466;
+	width:100%;
 	margin: 0 auto;
 }
 
 header h1 {
-	float: left;
 	margin: 0;
-	padding: 38px 0;
+	padding: 20px 0;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	float: right;
-	padding: 46px 0;
+	padding: 20px 0;
 }
 header nav ul {
 	margin: 0;
@@ -57,9 +78,9 @@ header nav ul {
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 14px;
-	padding: 0 10px;
-	display: inline;
+	font-size: 0.875rem;
+	padding: 15px;
+	display: flex;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -69,22 +90,22 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 0 auto;
-	clear: both;
+	flex-flow: row wrap;
 }
 
-.main-image {
-	height: auto;
-	float: left;
-}
 .main-image img {
-	width: 100%;
 	border-bottom: 3px solid #77a466;
+	width: 100%;
+
 }
 
 .main-title {
-	height: auto;
-	float: left;
+	
+
 }
 .main-title h2 {
 	text-align: left;
@@ -93,16 +114,15 @@ header nav ul li a{
 }
 .main-title p {
 	padding: 0;
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 25px;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
-	height: auto;
-	float: left;
+	width: 100%;
+    flex-flow: row wrap;
 	border-top: 1px solid #eee;
 }
 
@@ -110,14 +130,11 @@ header nav ul li a{
 	padding: 10px 0;
 }
 
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
+
 
 .section-two h3,
 .section-three h3 {
-	padding: 10px 30px;
+	padding: 10px 0;
 }
 
 .menu {
@@ -131,26 +148,65 @@ header nav ul li a{
 
 .reviews {
 	color: #333;
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 21px;
+	padding: 0;
 }
 
 .address {
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 24px;
+	padding: 0;
 }
 
 /*The widths are in a percentage!*/
 footer {
-	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	clear: both;
 	text-align: center;
+	flex-flow: row wrap;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+/************* FOR TABLETS ***********/
+@media (min-width:768px) {
+	body {
+		...
+	}
+	h1 {
+		font-size: 1.6875rem;
+	}
+
+	header nav ul li {
+		padding:10px;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		/* How do I get these sections to be aligned evenly and adjust the padding so the text is not touching the edges ??? */
+		display: ;
+		width: 33%;
+		flex-flow: column;
+	}
+	.section-two {
+		border-top: 1px solid #eee;
+		border-right: 1px solid #eee;
+		border-left: 1px solid #eee;
+	}
+	/* How do I get the image size to adjust with the page size ??? It is very big and needs to be smaller for mobile (and a bit smaller tablet and desktop) */
+}
+
+/*********** FOR DESKTOP *************/
+@media (min-width:1200px) {
+	body {
+		
+	}
 }
