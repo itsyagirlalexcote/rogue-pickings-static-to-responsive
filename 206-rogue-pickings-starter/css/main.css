@@ -1,6 +1,7 @@
 html {
 	font-size: 16px;
 }
+
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	display: flex;
@@ -10,7 +11,7 @@ body {
 	font-size: 1rem;
 }
 
-.container{
+.container {
 	max-width: 1200px;
 	width: 90%;
 	margin: 0 auto;
@@ -18,7 +19,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	
 }
 
 h1,
@@ -28,6 +28,7 @@ h3 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
+
 h1 {
 	display: flex;
 	justify-content: center;
@@ -36,9 +37,11 @@ h1 {
 	border-bottom: 3px solid #77a466;
 	width: 100%;
 }
+
 h2 {
 	font-size: 1.125rem;
 }
+
 h3 {
 	font-size: 0.75rem;
 }
@@ -64,6 +67,7 @@ header h1 {
 	margin: 0;
 	padding: 20px 0;
 }
+
 header h1 span {
 	color: #77a466;
 }
@@ -71,10 +75,12 @@ header h1 span {
 header nav {
 	padding: 20px 0;
 }
+
 header nav ul {
 	margin: 0;
 	padding: 0;
 }
+
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
@@ -82,6 +88,7 @@ header nav ul li {
 	padding: 15px;
 	display: flex;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
@@ -100,18 +107,14 @@ header nav ul li a{
 .main-image img {
 	border-bottom: 3px solid #77a466;
 	width: 100%;
-
 }
 
-.main-title {
-	
-
-}
 .main-title h2 {
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
 }
+
 .main-title p {
 	padding: 0;
 	font-size: 1rem;
@@ -130,8 +133,6 @@ header nav ul li a{
 	padding: 10px 0;
 }
 
-
-
 .section-two h3,
 .section-three h3 {
 	padding: 10px 0;
@@ -141,6 +142,7 @@ header nav ul li a{
 	list-style: none;
 	padding: 0;
 }
+
 .menu li {
 	padding: 10px 0;
 	color:#77a466;
@@ -169,6 +171,7 @@ footer {
 	text-align: center;
 	flex-flow: row wrap;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
@@ -179,8 +182,9 @@ footer span {
 /************* FOR TABLETS ***********/
 @media (min-width:768px) {
 	body {
-		...
+		min-width:768px;
 	}
+
 	h1 {
 		font-size: 1.6875rem;
 	}
@@ -188,18 +192,35 @@ footer span {
 	header nav ul li {
 		padding:10px;
 	}
+
+	.bottom-section {
+		flex-flow: row wrap;
+	}
+
 	.section-one,
 	.section-two,
 	.section-three {
-		/* How do I get these sections to be aligned evenly and adjust the padding so the text is not touching the edges ??? */
-		display: ;
-		width: 33%;
-		flex-flow: column;
-	}
-	.section-two {
+		height: 250px;
+		width: 245px;
 		border-top: 1px solid #eee;
+		flex-flow: row wrap;
+		display: flex;
+		vertical-align: top;
+		justify-content: space-between;
+	}
+
+	.section-one {
+		padding: 10px 0;
+	}
+
+	.section-two {
 		border-right: 1px solid #eee;
 		border-left: 1px solid #eee;
+		padding: 10px 30px;
+	}
+
+	.section-three {
+		padding: 10px 0px 10px 30px;
 	}
 	/* How do I get the image size to adjust with the page size ??? It is very big and needs to be smaller for mobile (and a bit smaller tablet and desktop) */
 }
@@ -207,6 +228,29 @@ footer span {
 /*********** FOR DESKTOP *************/
 @media (min-width:1200px) {
 	body {
-		
+		min-width:1200px;
 	}
-}
+
+	h1 {
+		font-size: 1.6875rem;
+	}
+
+	.bottom-section {
+		flex-flow: row wrap;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		height: 250px;
+		width: 300px;
+		border-top: 1px solid #eee;
+		flex-flow: row wrap;
+		display: flex;
+		vertical-align: top;
+	}
+
+	.section-two {
+		border-right: 1px solid #eee;
+		border-left: 1px solid #eee;
+	}
